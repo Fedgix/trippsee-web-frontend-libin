@@ -1,10 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import logo from "../public/logo.jpg";
 
 
 function Header() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+  const goToSection = (id) => (e) => {
+    if (!isHome) return;
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    window.history.replaceState(null, "", `#${id}`);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,34 +41,29 @@ function Header() {
 </h1>     </div>
 
       <nav style={{...styles.nav, gap: isMobile ? "1rem" : "1.8rem"}}>
-        <Link to="/"
+        <Link
+          to="/#about"
+          onClick={goToSection("about")}
           style={{
             ...styles.navLink,
             padding: isMobile ? "1px 1px" : "2px 8px",
             fontSize: isMobile ? "0.85rem" : "0.9rem",
-          }} 
-  onClick={() => {
-    document.getElementById("about").scrollIntoView({
-      behavior: "smooth",
-    });
-  }}        >
+          }}
+        >
           About
         </Link>
 
-        <div
+        <Link
+          to="/#contact"
+          onClick={goToSection("contact")}
           style={{
             ...styles.navLink,
             padding: isMobile ? "1px 1px" : "2px 8px",
-          fontSize: isMobile ? "0.85rem" : "0.9rem",
-          }}
-          onClick={() => {
-            document.getElementById("contact").scrollIntoView({
-              behavior: "smooth",
-            });
+            fontSize: isMobile ? "0.85rem" : "0.9rem",
           }}
         >
           Contact
-        </div>
+        </Link>
 
         {/* <div
           style={{
