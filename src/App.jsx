@@ -47,7 +47,7 @@ function App() {
                   </div>
                 </div>
               </div>
-
+{/* 
               <div className="app-download">
                  <a
     href="https://play.google.com/store/apps/details?id=apps.trippsee.com"
@@ -67,7 +67,7 @@ function App() {
     <img src={appleIcon} alt="Apple Store Icon" className="apple-icon" />
     Apple Store
   </a>
-              </div>
+              </div> */}
             </div>
 
             <Details />

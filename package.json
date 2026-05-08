@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "homepage": "https://libinseban.github.io/trippsee-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
