@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "apps.trippsee.com",
+      "sha256_cert_fingerprints": [
+        "A1:BC:5F:CE:D0:B3:01:DD:EC:10:C5:42:13:39:6F:9F:B9:E6:CC:2D:D9:0E:51:C2:B2:6C:04:3E:13:AA:C8:39"
+      ]
+    }
+  }
+]

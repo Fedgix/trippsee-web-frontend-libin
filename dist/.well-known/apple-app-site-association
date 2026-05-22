@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["6CNFA8T846.apps.trippsee.in"],
+        "paths": ["/post/*", "/profile/*", "/"]
+      }
+    ]
+  }
+}
