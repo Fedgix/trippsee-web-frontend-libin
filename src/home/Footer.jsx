@@ -33,7 +33,8 @@ function Footer() {
 
           <h3>Quick Links</h3>
 
-          <a href="#about">About Us</a>
+          <a href="/#about">About Us</a>
+          <a href="/#contact">Contact</a>
           <a href="/terms-conditions">Terms & Conditions</a>
           <a href="/privacy-policy">Privacy Policy</a>
 
@@ -42,7 +43,7 @@ function Footer() {
 
         {/* CONTACT */}
 
-        <div className="footer-contact" id="contact">
+        <div className="footer-contact">
 
           <h3>Contact</h3>
 

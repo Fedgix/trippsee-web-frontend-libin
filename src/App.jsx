@@ -1,16 +1,17 @@
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import Header from './components/Header.jsx'
+import ContactSection from './components/ContactSection.jsx';
 import image from './public/hawali-beach.jpg';
 import MyDatePicker from './components/DatePicker.jsx';
 import googleplay from './public/google-play.png';
 import appleIcon from './public/apple.png';
 import './style/footer.css';
 import Details from './home/Details.jsx';
-import Featured from './services/Featured.jsx';
 import About from './home/About.jsx';
 import Experience from './services/Experience.jsx';
 import Footer from './home/Footer.jsx';
-
-import { Routes, Route } from 'react-router-dom';
 
 import PrivacyPolicy from './components/privacy.jsx';
 import TermsConditions from './components/Terms&Conditions.jsx';
@@ -19,9 +20,23 @@ import './style/main.css';
 import './style/searchBox.css';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+    const id = location.hash.replace('#', '');
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    const frame = requestAnimationFrame(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [location.pathname, location.hash]);
 
   return (
     <>
+      <Toaster position="top-center" />
       <Header />
 
       <Routes>
@@ -71,9 +86,9 @@ function App() {
             </div>
 
             <Details />
-            <Featured />
             <About />
             <Experience />
+            <ContactSection />
           </>
         }/>
 
