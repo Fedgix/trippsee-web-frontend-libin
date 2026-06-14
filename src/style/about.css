@@ -1,7 +1,7 @@
 .about-section{
   background:#f4f4f4;
   padding:90px 20px;
-  /* margin-top:40px; */
+  margin-top:50px;
 }
 /* container */
 
@@ -78,20 +78,52 @@
 
 /* -------------------- */
 /* Tablet */
-/* -------------------- */
 
-@media (max-width:900px){
+
+@media (min-width:601px) and (max-width:900px){
+
+  .about-section{
+  padding:60px 25px;
+    margin-top:50px; 
+  }
+
+  .about-container{
+    max-width:750px;
+  }
 
   .about-title{
     font-size:36px;
+    margin-bottom:15px;
   }
 
   .about-description{
-    font-size:18px;
+    font-size:17px;
+    max-width:700px;
+    margin-bottom:40px;
+    line-height:1.6;
+  }
+
+  .about-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+  }
+
+  .about-card{
+    padding:30px 20px;
+    min-height:220px;
+  }
+
+  .about-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+  }
+
+  .about-card p{
+    font-size:15px;
+    line-height:1.5;
   }
 
 }
-
 /* -------------------- */
 /* Mobile */
 /* -------------------- */

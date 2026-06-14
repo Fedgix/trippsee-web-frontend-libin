@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* =========================
+   PAGE
+========================= */
+
+.download-page{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+
+  background:
+    linear-gradient(
+      rgba(12,41,31,.75),
+      rgba(12,41,31,.75)
+    ),
+    url("https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1600&q=80");
+
+  background-size:cover;
+  background-position:center;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.download-wrapper{
+  max-width:600px;
+  width:100%;
+
+  text-align:center;
+  color:white;
+
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+
+  padding:45px 35px;
+
+  border-radius:30px;
+
+  border:1px solid rgba(255,255,255,.15);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.25);
+}
+
+/* =========================
+   TAG
+========================= */
+
+.welcome-tag{
+  display:inline-block;
+  padding:10px 24px;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,.1);
+
+  color:#ffd166;
+
+  font-family:'Poppins',sans-serif;
+  font-size:13px;
+  font-weight:500;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.download-title{
+  margin-top:15px;
+
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+
+  font-size:clamp(2.5rem, 5vw, 3.8rem);
+  line-height:1.1;
+}
+
+.download-title span{
+  color:#001806;
+  text-shadow: #66ff7a 0px 0px 8px;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.download-description{
+  margin:25px auto 0;
+
+  max-width:500px;
+
+  font-size:16px;
+  line-height:1.8;
+
+  font-family:'Poppins',sans-serif;
+
+  color:rgba(255,255,255,.9);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.download-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+
+  margin-top:35px;
+}
+
+.download-btn{
+  width:220px;
+
+  padding:16px 20px;
+
+  text-decoration:none;
+
+  border-radius:14px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  transition:.3s ease;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.download-btn:hover{
+  transform:translateY(-5px);
+}
+
+.download-btn small{
+  display:block;
+
+  font-size:10px;
+  letter-spacing:1.5px;
+
+  opacity:.85;
+}
+
+.store-text{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  font-size:18px;
+  line-height:1;
+}
+
+.store-text svg{
+  font-size:20px;
+}
+
+/* =========================
+   BUTTON COLORS
+========================= */
+
+.android-btn{
+  background:linear-gradient(135deg,#FFD166,#F4A261);
+  color:#1b4332;
+}
+
+.ios-btn{
+  background:rgba(255,255,255,.95);
+  color:#1f2937;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.download-footer{
+  margin-top:25px;
+
+  font-size:13px;
+
+  font-family:'Poppins',sans-serif;
+
+  color:rgba(255,255,255,.75);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width:601px) and (max-width:1024px){
+
+  .download-page{
+    padding:30px 20px;
+  }
+
+  .download-wrapper{
+    max-width:550px;
+    padding:40px 28px;
+  }
+
+  .download-title{
+    font-size:3.2rem;
+  }
+
+  .download-description{
+    font-size:15px;
+  }
+
+  .download-btn{
+    width:200px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:600px){
+
+  .download-page{
+    padding:20px 12px;
+  }
+
+  .download-wrapper{
+    padding:30px 18px;
+    border-radius:20px;
+  }
+
+  .welcome-tag{
+    font-size:10px;
+    padding:8px 16px;
+  }
+
+  .download-title{
+    font-size:2.4rem;
+  }
+
+  .download-description{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .download-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .download-btn{
+    width:100%;
+    max-width:280px;
+  }
+
+  .store-text{
+    font-size:17px;
+  }
+
+  .store-text svg{
+    font-size:18px;
+  }
+
+  .download-footer{
+    font-size:12px;
+  }
+}

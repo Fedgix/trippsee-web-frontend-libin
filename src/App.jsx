@@ -9,9 +9,11 @@ import googleplay from './public/google-play.png';
 import appleIcon from './public/apple.png';
 import './style/footer.css';
 import Details from './home/Details.jsx';
+import Featured from './services/Featured.jsx';
 import About from './home/About.jsx';
 import Experience from './services/Experience.jsx';
 import Footer from './home/Footer.jsx';
+import DownloadPage from './services/DownloadPage.jsx';
 
 import PrivacyPolicy from './components/privacy.jsx';
 import TermsConditions from './components/Terms&Conditions.jsx';
@@ -42,6 +44,7 @@ function App() {
       <Routes>
 
         {/* HOME PAGE */}
+        <Route path="/download" element={<DownloadPage />} />
 
         <Route path="/" element={
           <>
@@ -86,6 +89,7 @@ function App() {
             </div>
 
             <Details />
+            <Featured />
             <About />
             <Experience />
             <ContactSection />
@@ -102,7 +106,7 @@ function App() {
 
       </Routes>
 
-      <Footer />
+      {location.pathname !== "/download" && <Footer />}
 
     </>
   )
