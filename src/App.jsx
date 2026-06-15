@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header.jsx'
 import ContactSection from './components/ContactSection.jsx';
@@ -103,6 +103,13 @@ function App() {
         {/* TERMS PAGE */}
 
         <Route path="/terms-conditions" element={<TermsConditions />} />
+
+        {/* Deep links — open download page when app is not installed */}
+        <Route path="/post/:id" element={<Navigate to="/download" replace />} />
+        <Route path="/profile/:id" element={<Navigate to="/download" replace />} />
+
+        {/* Unknown URLs */}
+        <Route path="*" element={<Navigate to="/download" replace />} />
 
       </Routes>
 
