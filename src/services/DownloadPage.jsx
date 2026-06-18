@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/download.css";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
+import { appConfig } from "../lib/appConfig.js";
 
 function DownloadPage() {
   return (
@@ -23,7 +24,7 @@ function DownloadPage() {
         <div className="download-buttons">
 
           <a
-            href="https://play.google.com/store/apps/details?id=apps.trippsee.com"
+            href={appConfig.playStoreUrl}
             target="_blank"
             rel="noreferrer"
             className="download-btn android-btn"
@@ -39,7 +40,7 @@ function DownloadPage() {
           </a>
 
           <a
-            href="https://apps.apple.com/in/app/trippsee/id6759007924"
+            href={appConfig.appStoreUrl}
             target="_blank"
             rel="noreferrer"
             className="download-btn ios-btn"

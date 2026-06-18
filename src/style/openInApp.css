@@ -1,0 +1,60 @@
+.open-in-app {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: #f4f8f5;
+}
+
+.open-in-app-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.open-in-app-heading h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  color: #034218;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.open-in-app-heading p {
+  margin: 0 0 2rem;
+  color: #4b5c52;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.open-in-app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.open-in-app-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 3rem;
+  border-radius: 12px;
+  background: #034218;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.open-in-app-btn:hover {
+  background: #055320;
+}
+
+.open-in-app-countdown {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #6b7c72;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

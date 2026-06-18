@@ -14,6 +14,7 @@ import About from './home/About.jsx';
 import Experience from './services/Experience.jsx';
 import Footer from './home/Footer.jsx';
 import DownloadPage from './services/DownloadPage.jsx';
+import { PostSharePage, ProfileSharePage } from './pages/ShareLinkPage.jsx';
 
 import PrivacyPolicy from './components/privacy.jsx';
 import TermsConditions from './components/Terms&Conditions.jsx';
@@ -23,6 +24,10 @@ import './style/searchBox.css';
 
 function App() {
   const location = useLocation();
+  const isMinimalPage =
+    location.pathname === '/download' ||
+    location.pathname.startsWith('/post/') ||
+    location.pathname.startsWith('/profile/');
 
   useEffect(() => {
     if (location.pathname !== '/') return;
@@ -39,7 +44,7 @@ function App() {
   return (
     <>
       <Toaster position="top-center" />
-      <Header />
+      {!isMinimalPage && <Header />}
 
       <Routes>
 
@@ -104,16 +109,16 @@ function App() {
 
         <Route path="/terms-conditions" element={<TermsConditions />} />
 
-        {/* Deep links — open download page when app is not installed */}
-        <Route path="/post/:id" element={<Navigate to="/download" replace />} />
-        <Route path="/profile/:id" element={<Navigate to="/download" replace />} />
+        {/* Deep links — share landing when app is not installed */}
+        <Route path="/post/:id" element={<PostSharePage />} />
+        <Route path="/profile/:id" element={<ProfileSharePage />} />
 
         {/* Unknown URLs */}
         <Route path="*" element={<Navigate to="/download" replace />} />
 
       </Routes>
 
-      {location.pathname !== "/download" && <Footer />}
+      {!isMinimalPage && <Footer />}
 
     </>
   )
